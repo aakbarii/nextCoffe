@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import HomeDrawer from "../Drawer/HomeDrawer";
 
 // Icons & Images
@@ -42,7 +43,7 @@ const LOGO_SIZE = {
 };
 
 // Sub-components
-const NavItem = ({ item, isMobile = false }) => (
+const NavItem = ({ item, isMobile = false, isActive = false }) => (
   <li className="flex items-center gap-x-2">
     <Image
       src={item.icon}
@@ -53,8 +54,10 @@ const NavItem = ({ item, isMobile = false }) => (
     />
     <Link
       href={item.path}
-      className={`text-nowrap transition-colors hover:text-brown-600 ${
-        isMobile ? "text-lg text-gray-800" : "text-gray-300"
+      className={`text-nowrap transition-colors ${
+        isMobile
+          ? `text-lg ${isActive ? "text-emerald-600 font-bold" : "text-gray-800"}`
+          : `${isActive ? "text-emerald-600 font-semibold" : "text-black"} hover:text-emerald-600`
       }`}
     >
       {item.name}
@@ -62,7 +65,7 @@ const NavItem = ({ item, isMobile = false }) => (
   </li>
 );
 
-const NavItemsList = ({ items, isMobile = false }) => (
+const NavItemsList = ({ items, isMobile = false, currentPath }) => (
   <ul
     className={
       isMobile
@@ -70,9 +73,18 @@ const NavItemsList = ({ items, isMobile = false }) => (
         : "flex lg:gap-x-9 gap-x-5 tracking-tighter child:leading-[56px]"
     }
   >
-    {items.map((item) => (
-      <NavItem key={item.id} item={item} isMobile={isMobile} />
-    ))}
+    {items.map((item) => {
+      const isActive = currentPath === item.path || 
+        (item.path !== "/" && currentPath?.startsWith(item.path));
+      return (
+        <NavItem 
+          key={item.id} 
+          item={item} 
+          isMobile={isMobile} 
+          isActive={isActive}
+        />
+      );
+    })}
   </ul>
 );
 
@@ -139,17 +151,20 @@ const MobileMenuButton = ({ onClick }) => (
 // Main Component
 function Navbar() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const pathname = usePathname();
 
   const handleMenuClick = () => {
     setIsDrawerOpen(true);
   };
 
-  const mobileNavContent = <NavItemsList items={NAV_ITEMS} isMobile={true} />;
+  const mobileNavContent = (
+    <NavItemsList items={NAV_ITEMS} isMobile={true} currentPath={pathname} />
+  );
 
   return (
     <>
       {/* Desktop Header */}
-      <header className="container m-auto absolute top-5 right-0 left-0 bg-gray-100 rounded-3xl hidden md:flex lg:flex items-center md:w-[85%] w-[90%] h-20 mx-auto lg:px-10 px-5 z-50">
+      <header className="container m-auto absolute top-5 right-0 left-0 bg-gray-100 rounded-3xl hidden md:flex lg:flex items-center md:w-[85%] w-[90%] h-20 mx-auto lg:px-10 px-5 z-50 shadow-normal">
         <div className="flex w-full items-center justify-between">
           <nav className="flex lg:gap-x-9 gap-x-5 items-center h-14">
             <Link href="/" className="shrink-0" aria-label="صفحه اصلی">
@@ -161,7 +176,7 @@ function Navbar() {
                 priority
               />
             </Link>
-            <NavItemsList items={NAV_ITEMS} />
+            <NavItemsList items={NAV_ITEMS} currentPath={pathname} />
           </nav>
 
           <div className="flex items-center gap-x-4">
@@ -172,7 +187,7 @@ function Navbar() {
       </header>
 
       {/* Mobile Header */}
-      <div className="flex md:hidden items-center justify-between bg-gray-100 m-auto absolute top-5 right-0 left-0 lg:w-[85%] w-[90%] h-20 mx-auto lg:px-10 px-5 rounded-4xl z-50">
+      <div className="flex md:hidden items-center justify-between bg-gray-100 m-auto absolute top-5 right-0 left-0 lg:w-[85%] w-[90%] h-20 mx-auto lg:px-10 px-5 rounded-4xl z-50 shadow-normal">
         <MobileMenuButton onClick={handleMenuClick} />
 
         <HomeDrawer

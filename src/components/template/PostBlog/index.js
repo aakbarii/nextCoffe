@@ -1,5 +1,5 @@
-import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { postImg } from "../../../../public/image";
 
 const PostComponent = () => {
@@ -44,21 +44,27 @@ const PostComponent = () => {
   return (
     <div className="grid grid-cols-1 gap-4 lg:grid-cols-6 lg:gap-6 w-full">
       {posts.map((post, index) => (
-        <div
+        <Link
           key={post.id}
+          href="/blog"
           className={`${
             index < 2 ? "lg:col-span-3 h-64" : "lg:col-span-2 h-48"
-          } border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 relative`}
+          } border rounded-lg overflow-hidden shadow-sm hover:shadow-normal transition-all duration-300 relative group`}
         >
-          <Image src={post.image} alt={post.title} layout="fill" objectFit="cover" />
-          <div className="p-4 absolute bottom-0 bg-opacity-75 w-full">
-            <div className="text-sm text-white flex justify-center gap-x-2">
-              <span>📆{post.date}</span>
-              <span>💬{post.comments}</span>
+          <Image 
+            src={post.image} 
+            alt={post.title} 
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+          <div className="p-4 absolute bottom-0 bg-gradient-to-t from-black/80 to-transparent w-full">
+            <div className="text-sm text-white flex justify-center gap-x-2 mb-2">
+              <span>📆 {post.date}</span>
+              <span>💬 {post.comments}</span>
             </div>
-            <h2 className="text-sm text-center text-white mb-2">{post.title}</h2>
+            <h2 className="text-sm text-center text-white font-semibold">{post.title}</h2>
           </div>
-        </div>
+        </Link>
       ))}
     </div>
   );

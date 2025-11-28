@@ -3,7 +3,7 @@ function BlackBox() {
     <>
       <div className="container">
         <div className="bg-[#1b1b1d] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 rounded-4xl text-center mt-56">
-          <div className="text-white my-4 mb-12 flex flex-col items-center">
+          <div className="text-white my-4 mb-12 flex flex-col items-center hover:scale-105 transition-transform cursor-default">
             <svg
               className="w-12 h-12 flex text-center content-center my-2"
               xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +30,7 @@ function BlackBox() {
               ما رست هفتگی قهوه و ارسال از درب کارخانه قهوه‌ی عمده است.
             </p>
           </div>
-          <div className="text-white my-4 mb-12 flex flex-col items-center">
+          <div className="text-white my-4 mb-12 flex flex-col items-center hover:scale-105 transition-transform cursor-default">
             <svg
               className="w-12 h-12 flex text-center content-center my-2"
               xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +57,7 @@ function BlackBox() {
               ما رست هفتگی قهوه و ارسال از درب کارخانه قهوه‌ی عمده است.
             </p>
           </div>
-          <div className="text-white my-4 mb-12 flex flex-col items-center">
+          <div className="text-white my-4 mb-12 flex flex-col items-center hover:scale-105 transition-transform cursor-default">
             <svg
               className="w-12 h-12 flex text-center content-center my-2"
               xmlns="http://www.w3.org/2000/svg"
@@ -84,7 +84,7 @@ function BlackBox() {
               ما رست هفتگی قهوه و ارسال از درب کارخانه قهوه‌ی عمده است.
             </p>
           </div>
-          <div className="text-white my-4 mb-12 flex flex-col items-center">
+          <div className="text-white my-4 mb-12 flex flex-col items-center hover:scale-105 transition-transform cursor-default">
             <svg
               className="w-12 h-12 flex text-center content-center my-2"
               xmlns="http://www.w3.org/2000/svg"
@@ -111,7 +111,7 @@ function BlackBox() {
               ما رست هفتگی قهوه و ارسال از درب کارخانه قهوه‌ی عمده است.
             </p>
           </div>
-          <div className="text-white my-4 mb-12 flex flex-col items-center">
+          <div className="text-white my-4 mb-12 flex flex-col items-center hover:scale-105 transition-transform cursor-default">
             <svg
               className="w-12 h-12 flex text-center content-center my-2"
               xmlns="http://www.w3.org/2000/svg"

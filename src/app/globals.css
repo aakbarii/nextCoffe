@@ -52,3 +52,42 @@
 .range-slider {
   height: 5px !important;
 }
+
+/* Swiper Custom Styles */
+.swiper-pagination {
+  bottom: 0 !important;
+}
+
+.swiper-pagination-bullet-custom {
+  width: 10px !important;
+  height: 10px !important;
+  background: rgba(255, 255, 255, 0.5) !important;
+  opacity: 1 !important;
+  margin: 0 4px !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+}
+
+.swiper-pagination-bullet-active-custom {
+  background: #10b981 !important;
+  width: 24px !important;
+  border-radius: 5px !important;
+}
+
+.swiper-button-prev-custom::after,
+.swiper-button-next-custom::after {
+  display: none !important;
+}
+
+.swiper-button-prev-custom.swiper-button-disabled,
+.swiper-button-next-custom.swiper-button-disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+}
+
+@media (max-width: 640px) {
+  .swiper-button-prev-custom,
+  .swiper-button-next-custom {
+    display: none !important;
+  }
+}

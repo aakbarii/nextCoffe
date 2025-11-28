@@ -9,12 +9,12 @@ function Index() {
   return (
     <div className="bg-gray-200 min-h-screen">
       {/* Top bar */}
-      <div className="bg-white shadow p-3 py-2 flex justify-between items-center rounded-xl">
+      <div className="bg-white shadow-normal p-3 py-2 flex flex-col sm:flex-row justify-between items-center gap-4 rounded-xl">
         <h1 className="text-xl font-bold">فروشگاه</h1>
         <select
           value={sortOption}
           onChange={(e) => setSortOption(e.target.value)}
-          className="border rounded p-2"
+          className="border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-emerald-600 transition-all"
         >
           <option>مرتب سازی بر اساس...</option>
           <option>قیمت</option>
@@ -30,11 +30,11 @@ function Index() {
         ))}
       </div>
 
-      <div className="bg-white shadow p-4 flex justify-center items-center rounded-xl">
+      <div className="bg-white shadow-normal p-4 flex justify-center items-center rounded-xl">
         <div className="flex items-center gap-4">
-          <button className="text-blue-500 hover:underline">۱</button>
-          <button className="text-blue-500 hover:underline">۲</button>
-          <button className="text-blue-500 hover:underline">بعدی</button>
+          <button className="text-emerald-600 hover:text-emerald-700 hover:underline transition-colors">۱</button>
+          <button className="text-emerald-600 hover:text-emerald-700 hover:underline transition-colors">۲</button>
+          <button className="text-emerald-600 hover:text-emerald-700 hover:underline transition-colors">بعدی</button>
         </div>
       </div>
     </div>

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 import { questionIcon, waiteCoffeeIcon } from "../../../public/icons";
 import {
   arrowImg,
@@ -70,7 +69,7 @@ function index() {
               موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد .
             </p>
             <div className="mt-5 flex gap-x-6">
-              <button className="flex items-center rounded-3xl bg-emerald-600 text-white p-2 px-5 md:p-2 md:px-5 text-xs md:text-base">
+              <button className="flex items-center rounded-3xl bg-emerald-600 text-white p-2 px-5 md:p-2 md:px-5 text-xs md:text-base hover:bg-emerald-700 transition-colors shadow-normal">
                 <Image
                   src={waiteCoffeeIcon}
                   width={20}
@@ -80,17 +79,18 @@ function index() {
                 />
                 بزن بریم
               </button>
-              <Link href="/faq">
-                <p className="flex items-center rounded-3xl text-emerald-600 bg-slate-100 p-2 px-5 md:p-2 md:px-5 text-xs md:text-base">
-                  <Image
-                    src={questionIcon}
-                    alt="سوالی دارید؟"
-                    width={20}
-                    height={20}
-                    className="ml-1"
-                  />
-                  سوالی دارید؟
-                </p>
+              <Link
+                href="/call-to-us"
+                className="flex items-center rounded-3xl text-emerald-600 bg-slate-100 p-2 px-5 md:p-2 md:px-5 text-xs md:text-base hover:bg-emerald-600 hover:text-white transition-colors"
+              >
+                <Image
+                  src={questionIcon}
+                  alt="سوالی دارید؟"
+                  width={20}
+                  height={20}
+                  className="ml-1"
+                />
+                سوالی دارید؟
               </Link>
             </div>
           </div>
@@ -102,8 +102,8 @@ function index() {
             />
           </div>
         </div>
-        <div className="flex gap-x-8 mt-20">
-          <div className="w-16 h-16 md:w-24 md:h-24 rounded-full bg-slate-100 flex justify-center items-center">
+        <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-4 mt-20">
+          <div className="w-16 h-16 md:w-24 md:h-24 rounded-full bg-slate-100 flex justify-center items-center hover:scale-110 transition-transform">
             <Image
               className="w-24 h-24"
               src={sunImg}
@@ -112,17 +112,17 @@ function index() {
               height={96}
             />
           </div>
-          <p className="text-xl font-semibold">انتخاب نوع و نژاد قهوه</p>
+          <p className="text-lg md:text-xl font-semibold text-center">انتخاب نوع و نژاد قهوه</p>
 
           <Image
-            className="size-6"
+            className="size-6 hidden md:block"
             src={arrowImg}
             alt="Arrow"
             width={24}
             height={24}
           />
 
-          <div className="w-16 h-16 md:w-24 md:h-24 rounded-full bg-slate-100 flex justify-center items-center">
+          <div className="w-16 h-16 md:w-24 md:h-24 rounded-full bg-slate-100 flex justify-center items-center hover:scale-110 transition-transform">
             <Image
               className="w-24 h-24"
               src={coffeeMashinImg}
@@ -131,17 +131,17 @@ function index() {
               height={96}
             />
           </div>
-          <p className="text-xl font-semibold">تنظیم درصد رست و ترکیب</p>
+          <p className="text-lg md:text-xl font-semibold text-center">تنظیم درصد رست و ترکیب</p>
 
           <Image
-            className="size-6"
+            className="size-6 hidden md:block"
             src={arrowImg}
             alt="Arrow"
             width={24}
             height={24}
           />
 
-          <div className="w-16 h-16 md:w-24 md:h-24 rounded-full bg-slate-100 flex justify-center items-center">
+          <div className="w-16 h-16 md:w-24 md:h-24 rounded-full bg-slate-100 flex justify-center items-center hover:scale-110 transition-transform">
             <Image
               className="w-24 h-24"
               src={coffeeImg}
@@ -150,7 +150,7 @@ function index() {
               height={96}
             />
           </div>
-          <p className="text-xl font-semibold">انتخاب سفارش و تحویل بسته</p>
+          <p className="text-lg md:text-xl font-semibold text-center">انتخاب سفارش و تحویل بسته</p>
         </div>
         <CoffeeSelection />
       </div>

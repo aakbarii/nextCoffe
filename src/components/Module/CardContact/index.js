@@ -1,10 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 const CardContact = ({ phone, email, address, socialMedia }) => {
   return (
-    <div className="grid md:grid-cols-2 gap-4 gap-x-0">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div className="flex items-center bg-gray-50 p-2 rounded-lg shadow-sm lg:h-20 lg:w-[278px] h-auto w-auto">
         <div className="text-yellow-500 text-2xl mr-4">
           <svg

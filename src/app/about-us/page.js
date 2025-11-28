@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React from "react";
 import { aboutUsImg } from "../../../public/image";
 import Link from "next/link";
 import { questionIcon } from "../../../public/icons";
@@ -63,69 +62,71 @@ function page() {
             راهکارها، و شرایط سخت تایپ به پایان رسد .
           </p>
           <div className="mt-5 flex gap-x-6">
-            <Link href="/shop">
-              <p className="flex gap-x-2 items-center rounded-3xl bg-emerald-600 text-white p-2 px-5 md:p-2 md:px-5 text-xs md:text-base">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <path
-                    d="M3.01025 15.71C3.01025 20.2 4.81025 22 9.30025 22H14.6903C19.1803 22 20.9803 20.2 20.9803 15.71V11.22"
-                    stroke="white"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  ></path>
-                  <path
-                    d="M12.0005 12C13.8305 12 15.1805 10.51 15.0005 8.68L14.3405 2H9.67048L9.00048 8.68C8.82048 10.51 10.1705 12 12.0005 12Z"
-                    stroke="white"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  ></path>
-                  <path
-                    d="M18.3103 12C20.3303 12 21.8103 10.36 21.6103 8.35L21.3303 5.6C20.9703 3 19.9703 2 17.3503 2H14.3003L15.0003 9.01C15.1703 10.66 16.6603 12 18.3103 12Z"
-                    stroke="white"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  ></path>
-                  <path
-                    d="M5.64037 12C7.29037 12 8.78037 10.66 8.94037 9.01L9.16037 6.8L9.64037 2H6.59037C3.97037 2 2.97037 3 2.61037 5.6L2.34037 8.35C2.14037 10.36 3.62037 12 5.64037 12Z"
-                    stroke="white"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  ></path>
-                  <path
-                    d="M12.0005 17C10.3305 17 9.50049 17.83 9.50049 19.5V22H14.5005V19.5C14.5005 17.83 13.6705 17 12.0005 17Z"
-                    stroke="white"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  ></path>
-                </svg>
-                فروشگاه ما
-              </p>
+            <Link
+              href="/shop"
+              className="flex gap-x-2 items-center rounded-3xl bg-emerald-600 text-white p-2 px-5 md:p-2 md:px-5 text-xs md:text-base hover:bg-emerald-700 transition-colors"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M3.01025 15.71C3.01025 20.2 4.81025 22 9.30025 22H14.6903C19.1803 22 20.9803 20.2 20.9803 15.71V11.22"
+                  stroke="white"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></path>
+                <path
+                  d="M12.0005 12C13.8305 12 15.1805 10.51 15.0005 8.68L14.3405 2H9.67048L9.00048 8.68C8.82048 10.51 10.1705 12 12.0005 12Z"
+                  stroke="white"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></path>
+                <path
+                  d="M18.3103 12C20.3303 12 21.8103 10.36 21.6103 8.35L21.3303 5.6C20.9703 3 19.9703 2 17.3503 2H14.3003L15.0003 9.01C15.1703 10.66 16.6603 12 18.3103 12Z"
+                  stroke="white"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></path>
+                <path
+                  d="M5.64037 12C7.29037 12 8.78037 10.66 8.94037 9.01L9.16037 6.8L9.64037 2H6.59037C3.97037 2 2.97037 3 2.61037 5.6L2.34037 8.35C2.14037 10.36 3.62037 12 5.64037 12Z"
+                  stroke="white"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></path>
+                <path
+                  d="M12.0005 17C10.3305 17 9.50049 17.83 9.50049 19.5V22H14.5005V19.5C14.5005 17.83 13.6705 17 12.0005 17Z"
+                  stroke="white"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></path>
+              </svg>
+              فروشگاه ما
             </Link>
-            <Link href="/faq">
-              <p className="flex items-center rounded-3xl text-emerald-600 bg-slate-100 p-2 px-5 md:p-2 md:px-5 text-xs md:text-base">
-                <Image
-                  src={questionIcon}
-                  alt="سوالی دارید؟"
-                  width={20}
-                  height={20}
-                  className="ml-1"
-                />
-                سوالی دارید؟
-              </p>
+            <Link
+              href="/call-to-us"
+              className="flex items-center rounded-3xl text-emerald-600 bg-slate-100 p-2 px-5 md:p-2 md:px-5 text-xs md:text-base hover:bg-emerald-600 hover:text-white transition-colors"
+            >
+              <Image
+                src={questionIcon}
+                alt="سوالی دارید؟"
+                width={20}
+                height={20}
+                className="ml-1"
+              />
+              سوالی دارید؟
             </Link>
           </div>
         </div>
-        <div>
+        <div className="flex justify-center lg:justify-start">
           <Image
             src={aboutUsImg}
             alt="aboutUsImg"

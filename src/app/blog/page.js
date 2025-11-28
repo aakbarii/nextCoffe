@@ -1,7 +1,7 @@
-import React from "react";
 import PostBlog from "../../components/template/PostBlog";
 import CategoryBox from "../../components/Module/CategoryBox";
 import Image from "next/image";
+import Link from "next/link";
 import { calendarIcon } from "../../../public/icons";
 import { instagramImg, postImg } from "../../../public/image";
 
@@ -67,7 +67,7 @@ const cardsData = [
 function BlogPage() {
   return (
     <div className="bg-gray-100">
-      <div className="flex gap-x-16 pt-40 p-4 container mx-auto">
+      <div className="flex flex-col lg:flex-row gap-x-16 gap-y-8 pt-40 p-4 container mx-auto">
         <CategoryBox />
         <PostBlog />
       </div>
@@ -118,11 +118,11 @@ function BlogPage() {
           </div>
         </div>
 
-        <div className="grid grid-cols-4 gap-6 my-12 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 my-12 w-full">
           {cardsData.map((card, index) => (
             <div
               key={index}
-              className="bg-[#efeff1] w-[300px] h-[356px] rounded-3xl"
+              className="bg-gray-100 w-full max-w-[300px] mx-auto h-auto min-h-[356px] rounded-3xl hover:shadow-normal transition-shadow overflow-hidden"
             >
               <div className="flex justify-center items-center pt-3 pb-2">
                 <Image
@@ -150,19 +150,22 @@ function BlogPage() {
                     />
                     <span>{card.date}</span>
                   </div>
-                  <button className="flex px-4 py-1.5 text-xs text-center text-white bg-emerald-700 rounded-2xl">
+                  <Link
+                    href="/blog"
+                    className="flex px-4 py-1.5 text-xs text-center text-white bg-emerald-700 hover:bg-emerald-800 rounded-2xl transition-colors"
+                  >
                     مطالعه کنید
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
           ))}
         </div>
-        <div className="bg-white shadow p-4 flex justify-center items-center rounded-xl">
+        <div className="bg-white shadow-normal p-4 flex justify-center items-center rounded-xl">
           <div className="flex items-center gap-4">
-            <button className="text-blue-500 hover:underline">۱</button>
-            <button className="text-blue-500 hover:underline">۲</button>
-            <button className="text-blue-500 hover:underline">بعدی</button>
+            <button className="text-emerald-600 hover:text-emerald-700 hover:underline transition-colors">۱</button>
+            <button className="text-emerald-600 hover:text-emerald-700 hover:underline transition-colors">۲</button>
+            <button className="text-emerald-600 hover:text-emerald-700 hover:underline transition-colors">بعدی</button>
           </div>
         </div>
         <div className="flex justify-center my-5">

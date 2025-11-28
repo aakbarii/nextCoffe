@@ -1,5 +1,5 @@
-import React from "react";
 import AboutCard from "../../Module/AboutCard";
+
 function CostomLayout() {
 
   const cardsData = [
@@ -76,7 +76,7 @@ function CostomLayout() {
           ></path>
         </svg>
       </div>
-      <div className="flex justify-end mt-10 gap-x-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10 px-4">
         {cardsData.map((card, index) => (
           <AboutCard
             key={index}

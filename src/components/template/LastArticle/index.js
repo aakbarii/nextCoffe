@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 // Import local images
 import { postImg } from "../../../../public/image";
@@ -51,9 +52,9 @@ function LastArticle() {
       </div>
 
       {/* Cards */}
-      <div className="grid grid-cols-4 gap-6 mx-24 mb-52">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 container mx-auto px-6 mb-10">
         {/* Card 1 */}
-        <div className="bg-[#efeff1] w-[300px] h-[356px] rounded-3xl">
+        <div className="bg-gray-100 w-full max-w-[300px] mx-auto h-auto min-h-[356px] rounded-3xl hover:shadow-normal transition-shadow overflow-hidden">
           <div className="flex justify-center items-center pt-3 pb-2">
             <Image
               className="rounded-xl w-[281px] h-[200px]"
@@ -81,15 +82,18 @@ function LastArticle() {
                 />
                 <span>16 مهر 1401</span>
               </div>
-              <button className="flex px-4 py-1.5 text-xs text-center text-white bg-emerald-700 rounded-2xl">
+              <Link
+                href="/blog"
+                className="flex px-4 py-1.5 text-xs text-center text-white bg-emerald-700 hover:bg-emerald-800 rounded-2xl transition-colors"
+              >
                 مطالعه کنید
-              </button>
+              </Link>
             </div>
           </div>
         </div>
 
         {/* Card 2 */}
-        <div className="bg-[#efeff1] w-[300px] h-[356px] rounded-3xl">
+        <div className="bg-gray-100 w-full max-w-[300px] mx-auto h-auto min-h-[356px] rounded-3xl hover:shadow-normal transition-shadow overflow-hidden">
           <div className="flex justify-center items-center pt-3 pb-2">
             <Image
               className="rounded-xl w-[281px] h-[200px]"
@@ -117,15 +121,18 @@ function LastArticle() {
                 />
                 <span>16 مهر 1401</span>
               </div>
-              <button className="flex px-4 py-1.5 text-xs text-center text-white bg-emerald-700 rounded-2xl">
+              <Link
+                href="/blog"
+                className="flex px-4 py-1.5 text-xs text-center text-white bg-emerald-700 hover:bg-emerald-800 rounded-2xl transition-colors"
+              >
                 مطالعه کنید
-              </button>
+              </Link>
             </div>
           </div>
         </div>
 
         {/* Card 3 */}
-        <div className="bg-[#efeff1] w-[300px] h-[356px] rounded-3xl">
+        <div className="bg-gray-100 w-full max-w-[300px] mx-auto h-auto min-h-[356px] rounded-3xl hover:shadow-normal transition-shadow overflow-hidden">
           <div className="flex justify-center items-center pt-3 pb-2">
             <Image
               className="rounded-xl w-[281px] h-[200px]"
@@ -153,15 +160,18 @@ function LastArticle() {
                 />
                 <span>16 مهر 1401</span>
               </div>
-              <button className="flex px-4 py-1.5 text-xs text-center text-white bg-emerald-700 rounded-2xl">
+              <Link
+                href="/blog"
+                className="flex px-4 py-1.5 text-xs text-center text-white bg-emerald-700 hover:bg-emerald-800 rounded-2xl transition-colors"
+              >
                 مطالعه کنید
-              </button>
+              </Link>
             </div>
           </div>
         </div>
 
         {/* Card 4 */}
-        <div className="bg-[#efeff1] w-[300px] h-[356px] rounded-3xl">
+        <div className="bg-gray-100 w-full max-w-[300px] mx-auto h-auto min-h-[356px] rounded-3xl hover:shadow-normal transition-shadow overflow-hidden">
           <div className="flex justify-center items-center pt-3 pb-2">
             <Image
               className="rounded-xl w-[281px] h-[200px]"
@@ -189,9 +199,12 @@ function LastArticle() {
                 />
                 <span>16 مهر 1401</span>
               </div>
-              <button className="flex px-4 py-1.5 text-xs text-center text-white bg-emerald-700 rounded-2xl">
+              <Link
+                href="/blog"
+                className="flex px-4 py-1.5 text-xs text-center text-white bg-emerald-700 hover:bg-emerald-800 rounded-2xl transition-colors"
+              >
                 مطالعه کنید
-              </button>
+              </Link>
             </div>
           </div>
         </div>

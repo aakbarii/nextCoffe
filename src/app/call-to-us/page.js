@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React from "react";
 import { callToUsImg } from "../../../public/image";
 import CardContact from "../../components/Module/CardContact";
 import CriticismForm from "../../components/template/CallToUS/CriticismForm";
@@ -98,15 +97,15 @@ function Page() {
             />
           ))}
         </div>
-        <div>
+        <div className="flex justify-center lg:justify-start">
           <Image
             src={callToUsImg}
             alt="callToUsImg"
-            className="filter brightness-110 grayscale-0"
+            className="rounded-3xl hover:scale-105 transition-transform w-full max-w-full"
           />
         </div>
       </div>
-      <div className="mt-24 grid grid-cols-2">
+      <div className="mt-24 grid grid-cols-1 lg:grid-cols-2 gap-6">
         <CriticismForm />
         <Map />
       </div>

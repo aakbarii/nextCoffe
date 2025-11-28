@@ -1,5 +1,5 @@
-import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   boxIcon,
   elmIcon,
@@ -22,17 +22,19 @@ const CategoryBox = () => {
   ];
 
   return (
-    <div className="w-72 h-[360px] p-4 bg-white border rounded-lg shadow-md">
+    <div className="w-full max-w-[288px] h-auto min-h-[360px] p-4 bg-white border rounded-lg shadow-normal hover:shadow-lg transition-shadow">
       <ul className="space-y-4">
         {categories.map((category) => (
-          <li
-            key={category.id}
-            className="flex items-center justify-between text-gray-700 hover:text-gray-900 h-8"
-          >
-            <span className="flex items-center gap-2">
-              <Image alt={category.name} src={category.icon} />
-              <span className="text-sm font-medium">{category.name}</span>
-            </span>
+          <li key={category.id}>
+            <Link
+              href="/blog"
+              className="flex items-center justify-between text-gray-700 hover:text-emerald-600 h-8 transition-colors"
+            >
+              <span className="flex items-center gap-2">
+                <Image alt={category.name} src={category.icon} width={20} height={20} />
+                <span className="text-sm font-medium">{category.name}</span>
+              </span>
+            </Link>
           </li>
         ))}
       </ul>

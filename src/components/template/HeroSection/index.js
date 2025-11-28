@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 // Importing icon images
 import { shopIcon, waiteCoffeeIcon } from "../../../../public/icons";
@@ -27,7 +28,10 @@ function HeroSection() {
           متنوع با هدف بهبود ابزارهای کاربردی می باشد
         </p>
         <div className="md:mt-10 mt-5 flex gap-x-6">
-          <button className="flex items-center rounded-3xl bg-emerald-600 text-white p-2 px-5 md:p-2 md:px-5 text-xs md:text-base">
+          <Link
+            href="/costom"
+            className="flex items-center rounded-3xl bg-emerald-600 text-white p-2 px-5 md:p-2 md:px-5 text-xs md:text-base hover:bg-emerald-700 transition-colors shadow-normal"
+          >
             <Image
               src={waiteCoffeeIcon}
               width={20}
@@ -35,9 +39,12 @@ function HeroSection() {
               alt="Coffee Icon"
               className="ml-1"
             />
-            ترکیب شفارشی
-          </button>
-          <button className="flex items-center rounded-3xl text-emerald-600 bg-slate-100 p-2 px-5 md:p-2 md:px-5 text-xs md:text-base">
+            ترکیب سفارشی
+          </Link>
+          <Link
+            href="/shop"
+            className="flex items-center rounded-3xl text-emerald-600 bg-slate-100 p-2 px-5 md:p-2 md:px-5 text-xs md:text-base hover:bg-emerald-600 hover:text-white transition-colors"
+          >
             <Image
               src={shopIcon}
               width={20}
@@ -46,7 +53,7 @@ function HeroSection() {
               className="ml-1"
             />
             خرید کنید
-          </button>
+          </Link>
         </div>
         <svg
           className="absolute w-16 md:w-24 mr-72 md:mr-96 md:right-72 md:top-96 md:mt-32"
@@ -76,23 +83,35 @@ function HeroSection() {
           ></path>
         </svg>
       </div>
-      <div className="absolute md:right-28 md:top-96 top-50 mt-96 md:mt-10 pt-72 md:pt-0 flex items-center content-center text-center">
+      <div className="absolute md:right-28 md:top-96 top-90 md:mt-10 pt-72 md:pt-0 flex items-center content-center text-center">
         <div className="flex items-center gap-x-3">
-          <div className="w-16 h-16 md:w-32 md:h-32 rounded-full bg-gray-100">
-            <div onClick={() => handleImageChange(hero)}>
-              <Image src={hero} width={128} height={128} alt="Coffee" />
-            </div>
-          </div>
-          <div className="w-16 h-16 md:w-32 md:h-32 rounded-full bg-gray-100">
-            <div onClick={() => handleImageChange(hero_2)}>
-              <Image src={hero_2} width={128} height={128} alt="Other" />
-            </div>
-          </div>
-          <div className=" w-16 h-16 md:w-32 md:h-32 rounded-full bg-gray-100">
-            <div onClick={() => handleImageChange(hero_3)}>
-              <Image src={hero_3} width={128} height={128} alt="Shop" />
-            </div>
-          </div>
+          <button
+            onClick={() => handleImageChange(hero)}
+            className={`w-16 h-16 md:w-32 md:h-32 rounded-full bg-gray-100 overflow-hidden transition-all hover:scale-110 ${
+              image === hero ? "ring-2 ring-emerald-600" : ""
+            }`}
+            aria-label="تصویر قهوه"
+          >
+            <Image src={hero} width={128} height={128} alt="Coffee" />
+          </button>
+          <button
+            onClick={() => handleImageChange(hero_2)}
+            className={`w-16 h-16 md:w-32 md:h-32 rounded-full bg-gray-100 overflow-hidden transition-all hover:scale-110 ${
+              image === hero_2 ? "ring-2 ring-emerald-600" : ""
+            }`}
+            aria-label="تصویر دیگر"
+          >
+            <Image src={hero_2} width={128} height={128} alt="Other" />
+          </button>
+          <button
+            onClick={() => handleImageChange(hero_3)}
+            className={`w-16 h-16 md:w-32 md:h-32 rounded-full bg-gray-100 overflow-hidden transition-all hover:scale-110 ${
+              image === hero_3 ? "ring-2 ring-emerald-600" : ""
+            }`}
+            aria-label="تصویر فروشگاه"
+          >
+            <Image src={hero_3} width={128} height={128} alt="Shop" />
+          </button>
         </div>
       </div>
       <div className="order-first md:order-last flex items-center content-center text-center ml-14 h-80 md:h-96 md:mt-28 mb-5 md:mb-0">

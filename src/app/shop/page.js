@@ -1,11 +1,10 @@
-import React from "react";
 import FilterBox from "../../components/Module/FilterBox";
-import ShopProductList from "../../components/template/ShopProductList"
+import ShopProductList from "../../components/template/ShopProductList";
 
 function page() {
   return (
-    <div className="bg-gray-200">
-      <div className="container flex mx-auto pt-32 p-4">
+    <div className="bg-gray-200 min-h-screen">
+      <div className="container flex flex-col lg:flex-row mx-auto pt-32 p-4 gap-6">
         <FilterBox />
         <ShopProductList />
       </div>
