@@ -1,0 +1,62 @@
+{
+    "Products": [
+      {
+        "id": "1",
+        "title": "قهوه ساز برقی سینبو مدل SCM 2928 با بدنه سرامیکی",
+        "image": "https://halochin.ir/coffee-store/wp-content/uploads/2023/11/product-4-min.png",
+        "price": "2130000",
+        "takhfif": "16%",
+        "orgprice": "1790000"
+      },
+      {
+        "id": "2",
+        "title": "چای ساز برقی استیل بیشل مدل BLTM009 – bishel",
+        "image": "https://halochin.ir/coffee-store/wp-content/uploads/2023/11/product-3.png",
+        "price": "3400000",
+        "takhfif": "19%",
+        "orgprice": "2750000"
+      },
+      {
+        "id": "3",
+        "title": "پودر قهوه ترک ویژه عربیکا ۷۰ درصد مقدار ۲۵۰ گرم",
+        "image": "https://halochin.ir/coffee-store/wp-content/uploads/2023/11/product-6-min.png",
+        "price": "195000",
+        "takhfif": "28%",
+        "orgprice": "140000"
+      },
+      {
+        "id": "4",
+        "title": "دانه قهوه ترکیبی 250 گرم HOUSE Blend 100% Arabica",
+        "image": "https://halochin.ir/coffee-store/wp-content/uploads/2023/11/product-8-min.png",
+        "price": "279000",
+        "takhfif": "15%",
+        "orgprice": "236000"
+      },
+      {
+        "id": "5",
+        "title": "دانه قهوه ترکیبی 250 گرم HOUSE Blend 100% Arabica",
+        "image": "https://halochin.ir/coffee-store/wp-content/uploads/2023/11/product-5-min.png",
+        "price": "201000",
+        "takhfif": "10%",
+        "orgprice": "152000"
+      },
+      {
+        "id": "6",
+        "title": "بسته 60 عددی شکلات تلخ قهوه ویولتا فرمند ۵۵ گرمی",
+        "image": "https://halochin.ir/coffee-store/wp-content/uploads/2023/11/product-5-min.png",
+        "orgprice": "152000"
+      },
+      {
+        "id": "7",
+        "title": "بسته 60 عددی شکلات تلخ قهوه ویولتا فرمند ۵۵ گرمی",
+        "image": "https://halochin.ir/coffee-store/wp-content/uploads/2023/11/product-5-min.png",
+        "orgprice": "152000"
+      },
+      {
+        "id": "8",
+        "title": "بسته 60 عددی شکلات تلخ قهوه ویولتا فرمند ۵۵ گرمی",
+        "image": "https://halochin.ir/coffee-store/wp-content/uploads/2023/11/product-5-min.png",
+        "orgprice": "152000"
+      }
+    ]
+  }
